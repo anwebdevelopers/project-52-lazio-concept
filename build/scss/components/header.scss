@@ -1,0 +1,333 @@
+.header {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, $color-blue, $color-purple);
+}
+.header__container {
+    flex: 1 1 auto;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+.header__top {
+    flex: 0 1 auto;
+    padding: 5rem 0 2rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    margin: 0;
+    flex: 0 1 auto;
+}
+.header__button {
+
+    @include btn;
+    position: relative;
+    z-index: 999;
+    flex: 0 0 auto;
+    width: 3rem;
+    height: 2rem;
+    margin: 0 0 0 auto;
+
+    span, &:before, &:after {
+        position: absolute;
+        left: 0;
+        width: 3rem;
+        height: 2px;
+        background-color: #fff;
+        transition: all .5s ease;
+    }
+    span {
+        top: .9rem;
+    }
+    &:before, &:after {
+        content: '';
+    }
+    &:before {
+        top: 0;
+        animation: button-menu-before-static;
+        animation-duration: .5s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+    &:after {
+        bottom: 0;
+        animation: button-menu-after-static;
+        animation-duration: .5s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+    &:hover, &:active {
+        span, &:before, &:after {
+            background-color: $color-hover;
+        }
+    }
+    &.active {
+        span {
+            opacity: 0;
+        }
+        &:before {
+            animation: button-menu-before-active;
+            animation-duration: .5s;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+        }
+        &:after {
+            animation: button-menu-after-active;
+            animation-duration: .5s;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+@keyframes button-menu-before-active {
+    0% {
+        top: 0;;
+    }
+    50% {
+        top: .9rem;
+        transform: rotate(0);
+    }
+    100% {
+        top: .9rem;
+        transform: rotate(-45deg);
+    }
+}
+@keyframes button-menu-after-active {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: .9rem;
+        transform: rotate(0);
+    }
+    100% {
+        bottom: .9rem;
+        transform: rotate(45deg);
+    }
+}
+@keyframes button-menu-before-static {
+    0% {
+        top: .9rem;
+        transform: rotate(-45deg);
+    }
+    50% {
+        top: .9rem;
+        transform: rotate(0);
+    }
+    100% {
+        top: 0;
+    }
+}
+@keyframes button-menu-after-static {
+    0% {
+        bottom: .9rem;
+        transform: rotate(45deg);
+    }
+    50% {
+        bottom: .9rem;
+        transform: rotate(0);
+    }
+    100% {
+        bottom: 0;
+    }
+}
+.header__slider {
+    flex: 1 1 auto;
+    &.owl-carousel {
+        width: 100%;
+        //min-height: 100%;
+        display: flex !important;
+        .owl-stage-outer {
+            flex: 1 1 auto;
+            display: flex;
+            .owl-stage {
+                flex: 1 0 auto;
+                display: flex;
+                .owl-item {
+                    flex: 1 0 auto;
+                    display: flex;
+                    &.active {}
+
+                }
+            }
+        }
+        .owl-dots {
+            position: absolute;
+            left: 0;
+            bottom: 4rem;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            .owl-dot {
+                flex: 0 0 auto;
+                width: 1.2rem;
+                height: 1.2rem;
+                border-radius: 50%;
+                margin: 0 1.5rem 0 0;
+                border: 1px solid #fff;
+                transition: all .5s ease;
+
+
+                &.active {
+                   background-color: #fff;
+               }
+               &:hover, &:active {
+                   border-color: $color-hover;
+                   background-color: $color-hover;
+               }
+            }
+        }
+    }
+}
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.fadeIn {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+.fadeOut {
+	-webkit-animation-name: fadeOut;
+	animation-name: fadeOut;
+}
+
+.header__slider-item {
+    display: flex;
+}
+.header__slider-title {
+    flex: 0 1 auto;
+    align-self: center;
+    width: 55%;
+    padding: 6rem 0;
+    color: #fff;
+    b {
+        font-size: 120%;
+        line-height: 1.4;
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+    span {
+        font-size: 120%;
+        line-height: 1.4;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+}
+.header__slider-img {
+    margin: 0 0 0 5%;
+    flex: 0 1 auto;
+    align-self: flex-end;
+    width: 40%;
+    img {
+        display: inline-block !important;
+        max-width: 100%;
+        width: auto !important;
+        height: auto;
+        margin-bottom: -5px;
+    }
+}
+
+@media only screen and (max-width : 1060px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+    .header, .header__container {
+        display: block;
+        min-height: auto;
+    }
+    .header__slider-item {
+        display: block;
+        text-align: center;
+    }
+    .header__slider-title {
+        width: auto;
+    }
+    .header__slider-img {
+        width: auto;
+        margin: 0;
+        img {
+            max-width: 60%;
+        }
+    }
+    .header__slider {
+        padding: 0 0 5rem 0;
+        &.owl-carousel {
+            display: block !important;
+            .owl-dots {
+                position: static;
+                margin: 4rem 0 0 0;
+
+                justify-content: center;
+                .owl-dot {
+                    margin: 0 1rem 1rem 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .title {
+        font-size: 3.2rem;
+    }
+}
+
+@media only screen and (max-width : 360px) {
+
+}

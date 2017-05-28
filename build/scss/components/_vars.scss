@@ -1,0 +1,33 @@
+@import "bourbon";
+
+$color-hover: #f2adbe;
+$color-blue: #8db2f7;
+$color-purple: #ab96f0;
+$color-orange: #fa7e72;
+$color-aqua: #66c9cf;
+$color-green: #a1c57c;
+@mixin btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+// -webkit-appearance: none;
+// -moz-appearance: none;
+// -ms-appearance: none;
+// -o-appearance: none;
+// appearance: none!important;
+
+// &::-ms-expand {
+//     display: none;
+// }

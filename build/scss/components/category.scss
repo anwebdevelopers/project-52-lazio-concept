@@ -1,0 +1,124 @@
+.category {
+    position: relative;
+    padding: 10rem 0 5rem 0;
+    &.category_gradient_orange_purple {
+        background-image: linear-gradient(to right, $color-orange, $color-purple);
+        color: #fff;
+        .category__title {
+            color: inherit;
+        }
+        .button {
+            background-color: #fff;
+            color: #eb74ae;
+            &:hover, &:active, &:focus {
+                color: #fff;
+                background-color: $color-purple;
+            }
+        }
+    }
+    &.category_gradient_green_aqua {
+        background-image: linear-gradient(to right, $color-green, $color-aqua);
+        color: #fff;
+        .category__title {
+            color: inherit;
+        }
+        .button {
+            background-color: #fff;
+            color: #82c28f;
+            &:hover, &:active, &:focus {
+                color: #fff;
+                background-color: $color-purple;
+            }
+        }
+    }
+    &:nth-child(even) {
+        .category__box {
+            margin: 0 0 0 56%;
+        }
+        .category__img {
+            left: 0;
+            right: 50%;
+            bottom: 2rem;
+        }
+    }
+}
+.category__box {
+    width: 44%;
+    padding: 0 0 5rem 0;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+}
+.category__title {
+    margin: .5rem 0 0 0;
+    color: $color-aqua;
+}
+.category__text {
+    margin: 3rem 0 0 0;
+    p {
+        margin: 1rem 0 0 0;
+    }
+}
+.category__button {
+    margin: 4rem 0 0 0;
+}
+.category__img {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+.category__img-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120%;
+    background-size: cover;
+    background-position: center center;
+}
+
+@media only screen and (max-width : 1060px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .category {
+        &:nth-child(even) {
+            .category__box {
+                margin: 0;
+            }
+        }
+    }
+    .category__box {
+        width: auto;
+    }
+    .category__img {
+        position: relative;
+        min-height: 40rem;
+        top: 5rem;
+        left: auto;
+        bottom: auto;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .category__img {
+        min-height: 28rem;
+    }
+}
+
+@media only screen and (max-width : 360px) {
+    .category__img {
+        min-height: 22rem;
+    }
+}

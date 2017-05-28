@@ -1,0 +1,146 @@
+@import "bourbon";
+@import "components/vars.scss";
+@import "components/normalize.scss";
+@import "components/fonts.scss";
+
+*:focus::-webkit-input-placeholder {color: transparent}
+*:focus::-moz-placeholder          {color: transparent}
+*:focus:-moz-placeholder           {color: transparent}
+*:focus:-ms-input-placeholder      {color: transparent}
+
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	color: #666;
+}
+body input:required:valid,
+body textarea:required:valid {
+	color: #666;
+}
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+
+html {
+	height: 100% !important;
+	font-size: 10px;
+}
+body {
+	position: relative;
+	min-width: 320px;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 1.5rem;
+	line-height: 1.4;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	color: #343434;
+	background-color: #fff;
+}
+h1, h2, h3, h4, h5, h6, .pretitle, .title {
+	font-family: 'Proxima Nova';
+}
+.pretitle {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+	letter-spacing: .5px;
+    text-transform: uppercase;
+}
+.title {
+	margin: 0;
+    font-size: 4rem;
+	line-height: 1.1;
+    font-weight: 700;
+}
+.container {
+	max-width: 1060px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.hidden {
+	display: none;
+}
+a {
+	outline: none !important;
+}
+.button {
+	@include btn;
+	padding: 1.5rem 3rem;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	font-weight: 800;
+	letter-spacing: .5px;
+	font-family: 'Proxima Nova';
+	border-radius: 5rem;
+	transition: all .5s ease;
+	i {
+		margin-right: 1rem;
+	}
+	&:hover, &:active, &:focus {
+		box-shadow: 0 1rem 3rem 0 transparentize(#000, .8);
+	}
+	&.button_transparent {
+		color: $color-purple;
+		box-shadow: inset 0 0 0 2px $color-purple,
+		0 0 0 0 transparentize(#000, .8);
+		&:hover, &:active, &:focus {
+			background-color: $color-purple;
+			color: #fff;
+			box-shadow: inset 0 0 0 2px $color-purple,
+						0 1rem 3rem 0 transparentize(#000, .8);
+		}
+	}
+	&.button_gradient_aqua_blue {
+		color: #fff;
+		background-image: linear-gradient(90deg, $color-aqua, $color-blue);
+		&:hover, &:active, &:focus {
+			background-image: linear-gradient(-90deg, $color-aqua, $color-blue);
+		}
+	}
+}
+
+//Custom Styles Here
+@import "components/header.scss";
+@import "components/header-nav.scss";
+@import "components/manager.scss";
+@import "components/category.scss";
+@import "components/team.scss";
+@import "components/advantages.scss";
+
+//@import "build/scss/components/magnific-popup.scss";
+
+//ALWAYS END
+//@import "components/media.scss";
+
+//Load Libs SASS
+//@import "html/libs/animate/animate.sass";
+@import "html/libs/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min";
+//@import "html/libs/superfish/dist/css/superfish";
+@import "html/libs/font-awesome-4.7.0/scss/font-awesome.scss";
+//@import "html/libs/jQuery.mmenu/dist/css/jquery.mmenu.all";
+//@import "html/libs/magnific-popup/dist/magnific-popup";

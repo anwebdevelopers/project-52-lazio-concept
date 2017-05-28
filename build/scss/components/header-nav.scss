@@ -1,0 +1,113 @@
+.header__nav {
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    left: 100%;
+    bottom: 0;
+    width: 50%;
+    padding: 13rem 15px 5rem 5%;
+    background-color: #676ec2;
+    transition: all .5s ease;
+
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.header__menu {
+    flex: 0 0 auto;
+    margin: 0 0 auto 0;
+    padding: 0;
+    list-style: none;
+    max-width: 400px;
+
+    font-size: 2rem;
+    font-family: 'Proxima Nova';
+    li {
+        &:not(:first-child) {
+            margin: 1rem 0 0 0;
+        }
+        &:last-child {
+            margin: 5rem 0 0 0;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+            transition: .5s ease;
+            &:hover, &:active, &:focus {
+                color: $color-hover;
+            }
+        }
+    }
+}
+.header__social {
+    flex: 0 0 auto;
+    margin: 5rem 0 0 0;
+    padding: 0;
+    list-style: none;
+    max-width: 400px;
+
+    display: flex;
+    flex-wrap: wrap;
+    li {
+        flex: 0 1 auto;
+        margin: 0 1rem 1rem 0;
+        a {
+            display: inline-block;
+            vertical-align: top;
+            width: 3.8rem;
+            height: 3.8rem;
+            line-height: 3.8rem;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            text-decoration: none;
+            color: #fff;
+            transition: .5s ease;
+            &:hover, &:active, &:focus {
+                border-color: $color-hover;
+                color: $color-hover;
+            }
+        }
+    }
+}
+.header__copy {
+    flex: 0 0 auto;
+    max-width: 400px;
+    margin: 2rem 0 0 0;
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: 'Proxima Nova';
+    color: #fff;
+}
+@media only screen and (max-width : 1060px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .header__nav {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+    .header__nav {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .header__nav {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width : 360px) {
+    .header__nav {
+        width: 100%;
+    }
+}
