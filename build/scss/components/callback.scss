@@ -1,0 +1,108 @@
+.callback {
+    padding: 3rem 0;
+    background-color: #486074;
+}
+.callback__box {
+    display: flex;
+    align-items: center;
+}
+
+.callback__content {
+    flex: 1 1 auto;
+}
+.callback__title {
+    margin: 0;
+    color: #67c0a1;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.callback__text {
+    margin: 1rem 0 0 0;
+    font-size: 1.5rem;
+    color: #ccdfee;
+}
+.callback__form {
+    flex: 0 0 auto;
+    max-width: 40rem;
+    width: 100%;
+    margin: 0 0 0 4rem;
+    box-shadow: inset 0 0 0 2px #91a0ac;
+    border-radius: 3rem;
+
+    display: flex;
+    align-items: center;
+}
+.callback__input {
+    flex: 1 1 auto;
+    input {
+        display: block;
+        width: 100%;
+        outline: none;
+        box-shadow: none;
+        border-radius: 0;
+        border: none;
+        background-color: transparentize(#fff, 1);
+        padding: 1rem 2rem;
+        font-family: 'Proxima Nova';
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+        color: #b9ccdc;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        &::-webkit-input-placeholder {
+        	color: #b9ccdc;
+        	opacity: 1;
+        }
+        &:-moz-placeholder {
+        	color: #b9ccdc;
+        	opacity: 1;
+        }
+        &::-moz-placeholder {
+        	color: #b9ccdc;
+        	opacity: 1;
+        }
+
+        &:-ms-input-placeholder {
+        	color: #b9ccdc;
+        	opacity: 1;
+        }
+        &:focus::-webkit-input-placeholder {color: transparent}
+        &:focus::-moz-placeholder          {color: transparent}
+        &:focus:-moz-placeholder           {color: transparent}
+        &:focus:-ms-input-placeholder      {color: transparent}
+    }
+}
+@media only screen and (max-width : 1060px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .callback__box {
+        display: block;
+        text-align: center;
+    }
+    .callback__content {
+        margin: 3rem 0 0 0;
+    }
+    .callback__form {
+        margin: 3rem auto 0 auto;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

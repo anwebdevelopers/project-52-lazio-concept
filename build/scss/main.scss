@@ -117,9 +117,23 @@ a {
 	}
 	&.button_gradient_aqua_blue {
 		color: #fff;
-		background-image: linear-gradient(90deg, $color-aqua, $color-blue);
+		background-image: linear-gradient(to right, $color-aqua, $color-blue);
 		&:hover, &:active, &:focus {
-			background-image: linear-gradient(-90deg, $color-aqua, $color-blue);
+			filter: saturate(2);
+		}
+	}
+	&.button_gradient_blue_purple {
+		color: #fff;
+		background-image: linear-gradient(to right, $color-blue, $color-purple);
+		&:hover, &:active, &:focus {
+			filter: saturate(2);
+		}
+	}
+	&.button_gradient_green_aqua {
+		color: #fff;
+		background-image: linear-gradient(to right, $color-green, $color-aqua);
+		&:hover, &:active, &:focus {
+			filter: saturate(2);
 		}
 	}
 }
@@ -131,6 +145,15 @@ a {
 @import "components/category.scss";
 @import "components/team.scss";
 @import "components/advantages.scss";
+@import "components/consult.scss";
+@import "components/footer.scss";
+
+@import "components/product.scss";
+@import "components/material.scss";
+@import "components/gift.scss";
+@import "components/work.scss";
+@import "components/callback.scss";
+
 
 //@import "build/scss/components/magnific-popup.scss";
 

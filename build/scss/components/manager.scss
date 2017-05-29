@@ -63,7 +63,8 @@
     text-decoration: none;
     width: 55%;
     margin: 0 0 0 5%;
-    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
     &:before {
         content: '';
         position: absolute;
@@ -78,16 +79,7 @@
         background-position: center center;
     }
 }
-.manager__video-img {
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 120%;
-    background-size: cover;
-    background-position: center center;
-}
+
 
 @media only screen and (max-width : 1060px) {
 

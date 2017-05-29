@@ -3,6 +3,13 @@
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(to right, $color-blue, $color-purple);
+    &.header_small {
+        min-height: auto;
+        background-image: linear-gradient(to right, $color-green, $color-aqua);
+        .header__top {
+            padding: 1.5rem 0;
+        }
+    }
 }
 .header__container {
     flex: 1 1 auto;
@@ -141,7 +148,6 @@
     flex: 1 1 auto;
     &.owl-carousel {
         width: 100%;
-        //min-height: 100%;
         display: flex !important;
         .owl-stage-outer {
             flex: 1 1 auto;

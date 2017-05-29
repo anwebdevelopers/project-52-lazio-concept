@@ -20,7 +20,6 @@
 
 	<link rel="stylesheet" href="css/main.min.css">
 
-
 </head>
 
 <body>
@@ -89,9 +88,7 @@
 						<a href="#" class="button button_transparent"><i class="fa fa-arrow-left"></i>вернуться к описанию</a>
 					</div>
 				</div>
-				<a href="#" class="manager__video">
-					<div class="manager__video-img" style="background-image: url(img/img-video.jpg);"></div>
-				</a>
+				<a href="#" class="manager__video" style="background-image: url(img/img-video.jpg);"></a>
 			</div>
 		</div>
 	</section>
@@ -110,8 +107,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="category__img">
-			<div class="category__img-inner" style="background-image: url(img/img-category1.jpg);"></div>
+		<div class="category__img" data-scrollax-parent="true">
+			<div class="category__img-inner" style="background-image: url(img/img-category1.jpg);" data-scrollax="properties:{'translateY':'15%'}"></div>
 		</div>
 	</section>
 
@@ -129,8 +126,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="category__img">
-			<div class="category__img-inner" style="background-image: url(img/img-category2.jpg);"></div>
+		<div class="category__img" data-scrollax-parent="true">
+			<div class="category__img-inner" style="background-image: url(img/img-category2.jpg);" data-scrollax="properties:{'translateY':'15%'}"></div>
 		</div>
 	</section>
 
@@ -148,8 +145,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="category__img">
-			<div class="category__img-inner" style="background-image: url(img/img-category1.jpg);"></div>
+		<div class="category__img" data-scrollax-parent="true">
+			<div class="category__img-inner" style="background-image: url(img/img-category1.jpg);" data-scrollax="properties:{'translateY':'15%'}"></div>
 		</div>
 	</section>
 
@@ -220,10 +217,59 @@
 		</div>
 	</section>
 
+	<section class="consult">
+		<div class="consult__container container">
+			<h2 class="consult__title title">Заказать замер бесплатно</h2>
+			<p class="consult__text">Вы можете подать заявку на замер онлайн. Для этого заполинте фотрму ниже и
+			<br><b>мы перезвоним вам в течение 30 секунд.</b></p>
+			<form class="consult__form">
+				<div class="consult__form-col">
+					<label class="consult__form-item">
+						<input type="text" placeholder="Имя*">
+					</label>
+					<label class="consult__form-item">
+						<input type="text" placeholder="Email">
+					</label>
+					<label class="consult__form-item">
+						<input type="text" placeholder="Номер телефона">
+					</label>
+				</div>
+				<div class="consult__form-col">
+					<label class="consult__form-item">
+						<textarea placeholder="Ваше сообщение"></textarea>
+					</label>
+					<div class="consult__form-submit">
+						<button type="submit" class="button button_gradient_blue_purple">Заказать замер</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="footer__container container">
+			<div class="footer__box">
+				<figure class="footer__logo">
+					<img src="img/logo-footer.png" alt="">
+				</figure>
+				<div class="footer__text">
+					<p class="footer__author">Разработка сайта - студия <a href="#">SunRise Design</a></p>
+					<p class="footer__copy">© «Lazio» 2016</p>
+				</div>
+				<ul class="footer__social">
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="#"><i class="fa fa-vk"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+
 	<!-- Load Scripts Start -->
-	<script src="libs/jquery-3.2.1/jquery-3.2.1.min.js"></script>
-	<script src="libs/OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
-	<script src="libs/plugins-scroll/plugins-scroll.js"></script>
+	<script src="libs/jquery-3.2.1/jquery-3.2.1.min.js" defer></script>
+	<script src="libs/OwlCarousel2-2.2.1/dist/owl.carousel.min.js" defer></script>
+	<script src="libs/Scrollax.js/scrollax.min.js" defer></script>
+	<script src="libs/plugins-scroll/plugins-scroll.js" defer></script>
 
 	<script src="js/common.js" defer></script>
 	<!-- Load Scripts End -->

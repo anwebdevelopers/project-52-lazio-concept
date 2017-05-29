@@ -2,6 +2,9 @@ $(function() {
 
     'use strict';
 
+    var $window = $(window),
+    $html = $('html');
+
     /*******************************************************/
     //Header Nav
     /*******************************************************/
@@ -50,6 +53,40 @@ $(function() {
     });
 
     /*******************************************************/
+    //Аккордеон technologi
+    /*******************************************************/
+    var $productListItem = $('.product__list-item'),
+        $productListText = $('.product__list-text');
+
+    $productListItem.not(':first').addClass('hide');
+    $productListText.not(':first').hide();
+
+    $productListItem.on('click', function() {
+        $(this).toggleClass('hide').find($productListText).slideToggle(300);
+    });
+
+    /*******************************************************/
+    //Parallax Effect
+    /*******************************************************/
+    var scrollax = new Scrollax().init();
+
+    /*******************************************************/
+    //Tabs Material
+    /*******************************************************/
+    var $materialTabsButtons = $('.material__tabs-buttons'),
+        $materialTabsItem = $('.material__tabs-item');
+    $materialTabsButtons.find('button:first').addClass('active');
+    $materialTabsItem.not(':first').hide();
+    $materialTabsButtons.on('click', 'button:not(.active)', function() {
+        $(this).addClass('active').siblings().removeClass('active').closest('.material__tabs').find($materialTabsItem).hide().eq($(this).index()).fadeIn(300);
+    });
+
+    /*******************************************************/
+    //Callback Mask
+    /*******************************************************/
+    $('#callback').mask('+375 (99) 999-99-99',{placeholder:'+375 (__) ___-__-__'});
+
+    /*******************************************************/
     //Chrome Smooth Scroll
     /*******************************************************/
     try {
@@ -69,11 +106,10 @@ $(function() {
     //Fullscreen Header for IE
     /*******************************************************/
 
-    var $header = $('.header'),
-        $window = $(window);
+    var $header = $('.header');
     function fullscreen() {
         var w = $window.width();
-        if(($('html').hasClass('ie') || $('html').hasClass('gecko')) && w > 640) {
+        if(($html.hasClass('ie') || $html.hasClass('gecko')) && w > 640 && !$header.hasClass('header_small')) {
             $header.removeAttr('style');
             var windowHeight = $window.height(),
                 headerHeight = $header.height();

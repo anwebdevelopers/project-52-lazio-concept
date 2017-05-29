@@ -1,0 +1,68 @@
+.gift {
+    padding: 3rem 0;
+    background-color: #e8edf1;
+}
+.gift__box {
+    display: flex;
+    align-items: center;
+}
+.gift__icon {
+    margin: 0;
+    flex: 0 1 auto;
+}
+.gift__content {
+    flex: 1 1 auto;
+    margin: 0 0 0 4rem;
+}
+.gift__title {
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.1;
+    color: #143653;
+    font-weight: 600;
+    b {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+}
+.gift__text {
+    margin: 1rem 0 0 0;
+    font-size: 1.4rem;
+    color: #99a2aa;
+}
+.gift__button {
+    flex: 0 0 auto;
+    margin: 0 0 0 3rem;
+}
+@media only screen and (max-width : 1060px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .gift__box {
+        display: block;
+        text-align: center;
+    }
+    .gift__content {
+        margin: 3rem 0 0 0;
+    }
+    .gift__button {
+        margin: 3rem 0 0 0;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

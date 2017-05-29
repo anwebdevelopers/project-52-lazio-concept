@@ -1,0 +1,123 @@
+.consult {
+    padding: 6rem 0;
+    background-color: #313035;
+    background-image: url(../img/bg-consult.jpg);
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+}
+.consult__title {
+    text-align: center;
+}
+.consult__text {
+    max-width: 800px;
+    margin: 3rem auto 0 auto;
+    text-align: center;
+    b {
+        font-size: 1.8rem;
+    }
+}
+.consult__form {
+    margin: 4rem 0 0 0;
+
+    display: flex;
+}
+.consult__form-col {
+    flex: 0 1 auto;
+    width: 49%;
+    &:nth-child(even) {
+        margin: 0 0 0 2%;
+    }
+}
+.consult__form-item {
+    display: block;
+    &:not(:first-child) {
+        margin-top: 1rem;
+    }
+    input, textarea {
+        display: block;
+        width: 100%;
+        outline: none;
+        box-shadow: none;
+        border-radius: .5rem;
+        border: none;
+        background-color: transparentize(#fff, .8);
+        padding: 2rem 2.5rem;
+        font-family: 'Roboto';
+        font-size: 1.4rem;
+        color: #fff;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        transition: all .5s ease;
+        &::-webkit-input-placeholder {
+        	color: #fff;
+        	opacity: 1;
+        }
+        &:-moz-placeholder {
+        	color: #fff;
+        	opacity: 1;
+        }
+        &::-moz-placeholder {
+        	color: #fff;
+        	opacity: 1;
+        }
+
+        &:-ms-input-placeholder {
+        	color: #fff;
+        	opacity: 1;
+        }
+        &:focus::-webkit-input-placeholder {color: transparent}
+        &:focus::-moz-placeholder          {color: transparent}
+        &:focus:-moz-placeholder           {color: transparent}
+        &:focus:-ms-input-placeholder      {color: transparent}
+        &:hover, &:focus {
+            background-color: transparentize(#fff, .7);
+        }
+    }
+    input {
+        height: 6rem;
+    }
+    textarea {
+        height: 13rem;
+        resize: vertical;
+    }
+}
+.consult__form-submit {
+    margin: 2rem 0 0 0;
+    text-align: center;
+}
+
+@media only screen and (max-width : 1060px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    .consult__form {
+        display: block;
+    }
+    .consult__form-col {
+        width: auto;
+        margin: 1rem 0 0 0;
+        &:nth-child(even) {
+            margin: 1rem 0 0 0;
+        }
+    }
+}
+
+@media only screen and (max-width : 360px) {
+
+}

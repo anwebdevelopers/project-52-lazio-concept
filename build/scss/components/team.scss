@@ -47,9 +47,13 @@
 }
 
 @media only screen and (max-width : 992px) {
+    // .team__item {
+    //     width: 23%;
+    //     margin: 0 1% 3rem 1%;
+    // }
     .team__item {
-        width: 23%;
-        margin: 0 1% 3rem 1%;
+        width: 22%;
+        margin: 0 5.65% 3rem 5.65%;
     }
 }
 
@@ -61,9 +65,14 @@
 }
 
 @media only screen and (max-width : 640px) {
+    // .team__item {
+    //     width: 32%;
+    //     margin: 0 0.65% 3rem 0.65%;
+    // }
+
     .team__item {
-        width: 32%;
-        margin: 0 0.65% 3rem 0.65%;
+        width: 34%;
+        margin: 0 8% 3rem 8%;
     }
 }
 
