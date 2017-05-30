@@ -42,7 +42,7 @@
         border-radius: 0;
         border: none;
         background-color: transparentize(#fff, 1);
-        padding: 1rem 2rem;
+        padding: 1.3rem 2rem;
         font-family: 'Proxima Nova';
         font-size: 1.4rem;
         letter-spacing: 2px;
@@ -100,7 +100,21 @@
 }
 
 @media only screen and (max-width : 480px) {
-
+    .callback__form {
+        display: block;
+        box-shadow: none;
+        max-width: 22rem;
+    }
+    .callback__input {
+        input {
+            box-shadow: inset 0 0 0 2px #91a0ac;
+            border-radius: 3rem;
+            text-align: center;
+        }
+    }
+    .callback__submit {
+        margin: 2rem 0 0 0;
+    }
 }
 
 @media only screen and (max-width : 360px) {

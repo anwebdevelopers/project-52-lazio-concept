@@ -42,18 +42,20 @@ $(function() {
     //Header Slider
     /*******************************************************/
 
-    $('.header__slider').addClass('owl-carousel').owlCarousel({
+    $('.header__slider, .gallery__slider').addClass('owl-carousel').owlCarousel({
         animateIn: 'fadeIn',
         animateOut: 'fadeOut',
         loop: true,
         items: 1,
+        nav: true,
+        navText: '',
         autoplayTimeout: 8000,
         autoplay: true,
         smartSpeed: 1200,
     });
 
     /*******************************************************/
-    //Аккордеон technologi
+    //Accordion Product
     /*******************************************************/
     var $productListItem = $('.product__list-item'),
         $productListText = $('.product__list-text');
@@ -71,6 +73,17 @@ $(function() {
     var scrollax = new Scrollax().init();
 
     /*******************************************************/
+    //Видеопопап
+    /*******************************************************/
+    $('.popup-youtube').magnificPopup({
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false
+    });
+
+    /*******************************************************/
     //Tabs Material
     /*******************************************************/
     var $materialTabsButtons = $('.material__tabs-buttons'),
@@ -78,13 +91,18 @@ $(function() {
     $materialTabsButtons.find('button:first').addClass('active');
     $materialTabsItem.not(':first').hide();
     $materialTabsButtons.on('click', 'button:not(.active)', function() {
-        $(this).addClass('active').siblings().removeClass('active').closest('.material__tabs').find($materialTabsItem).hide().eq($(this).index()).fadeIn(300);
+        $(this).addClass('active').siblings().removeClass('active').closest('.material__tabs').find($materialTabsItem).slideUp(300).eq($(this).index()).slideDown(300);
     });
 
     /*******************************************************/
     //Callback Mask
     /*******************************************************/
     $('#callback').mask('+375 (99) 999-99-99',{placeholder:'+375 (__) ___-__-__'});
+
+    /*******************************************************/
+    //Callback Mask
+    /*******************************************************/
+    $('.vantages__item-title').equalHeight();
 
     /*******************************************************/
     //Chrome Smooth Scroll

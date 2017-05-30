@@ -1,6 +1,10 @@
 .manager {
     padding: 4rem 0;
+    &.manager_bg_gray {
+        background-color: #e8edf1;
+    }
 }
+
 .manager__box {
     display: flex;
 }
@@ -63,6 +67,7 @@
     text-decoration: none;
     width: 55%;
     margin: 0 0 0 5%;
+    box-shadow: 0 .7rem 2.7rem 0 transparentize(#182037, .9);
     background-size: cover;
     background-position: center center;
     &:before {

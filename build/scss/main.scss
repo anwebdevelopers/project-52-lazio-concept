@@ -97,6 +97,7 @@ a {
 	letter-spacing: .5px;
 	font-family: 'Proxima Nova';
 	border-radius: 5rem;
+	white-space: nowrap;
 	transition: all .5s ease;
 	i {
 		margin-right: 1rem;
@@ -138,6 +139,7 @@ a {
 	}
 }
 
+
 //Custom Styles Here
 @import "components/header.scss";
 @import "components/header-nav.scss";
@@ -153,9 +155,10 @@ a {
 @import "components/gift.scss";
 @import "components/work.scss";
 @import "components/callback.scss";
+@import "components/gallery.scss";
+@import "components/vantages.scss";
 
-
-//@import "build/scss/components/magnific-popup.scss";
+@import "build/scss/components/magnific-popup.scss";
 
 //ALWAYS END
 //@import "components/media.scss";
@@ -166,4 +169,4 @@ a {
 //@import "html/libs/superfish/dist/css/superfish";
 @import "html/libs/font-awesome-4.7.0/scss/font-awesome.scss";
 //@import "html/libs/jQuery.mmenu/dist/css/jquery.mmenu.all";
-//@import "html/libs/magnific-popup/dist/magnific-popup";
+@import "html/libs/magnific-popup/dist/magnific-popup";
