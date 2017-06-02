@@ -45,6 +45,7 @@
 .product__list-item {
     padding: 2rem 0;
     border-bottom: 1px solid #d7d7df;
+    cursor: pointer;
     &.hide {
         .product__list-title {
             color: #67c0a0;
@@ -59,7 +60,7 @@
     position: relative;
     margin: 0;
     text-transform: uppercase;
-    cursor: pointer;
+
     transition: all .3s ease;
     &:after {
         content: '\f077';
