@@ -55,6 +55,20 @@ $(function() {
     });
 
     /*******************************************************/
+    //Category Toggle
+    /*******************************************************/
+    var $categoryFront = $('.category__front'),
+        $categoryRear = $('.category__rear');
+    $categoryRear.hide();
+    $categoryFront.on('click', '.category__front-button', function() {
+        $(this).closest($categoryFront).slideUp(300).siblings($categoryRear).slideDown(300);
+    });
+    $categoryRear.on('click', '.category__rear-button', function() {
+        $(this).closest($categoryRear).slideUp(300).siblings($categoryFront).slideDown(300);
+    });
+
+
+    /*******************************************************/
     //Accordion Product
     /*******************************************************/
     var $productListItem = $('.product__list-item'),
